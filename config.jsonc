@@ -1,0 +1,99 @@
+{
+    "layer": "top",
+    "modules-left": ["hyprland/workspaces", "wlr/taskbar"],
+    /* "modules-center": ["hyprland/window"], */
+    "modules-right": ["tray",
+                    /* "cpu", "memory", "temperature", */
+                    "backlight",
+                    "network",
+                    "pulseaudio",
+                    "battery",
+                    "power-profiles-daemon",
+                    "custom/power",
+                    "clock",
+                    ],
+    "tray": {
+        "spacing": 10
+    },
+    "cpu": {
+        "format": "　{usage}%"
+    },
+    "memory": {
+        "format": "　{}%"
+    },
+    "backlight": {
+        //"device": "intel_backlight",
+        "format": "　{percent}%",
+        "format-icons": ["", ""]
+    },
+    "battery": {
+        "format": "{icon}  {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format-wifi": "　{signalStrength}%",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ethernet",
+        "format-disconnected": "⚠ ",
+        "on-click": "nm-connection-editor",
+        "tooltip-format": " {bandwidthDownBytes} 󰬬 {bandwidthUpBytes}",
+        "tooltip-format-ethernet": "{ifname}  {bandwidthDownBytes} 󰬬 {bandwidthUpBytes}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)    {bandwidthDownBytes} 󰬬 {bandwidthUpBytes}",
+        "tooltip-format-disconnected": "Disconnected"
+    },
+    "pulseaudio": {
+        "format": "　{volume}%",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "temperature": {
+        "critical-threshold": 60,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": [""]
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "power-profiles-daemon": {
+          "format": "{icon} ",
+          "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+          "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+          }
+    },
+    "hyprland/workspaces": {
+        "format": "{id}",
+        "persistent-workspaces": {
+            "*": 1
+        }
+    },
+    "hyprland/window": {
+        "format": "{}"
+    },
+    "custom/power": {
+        "format": " ",
+        "on-click": "hyprctl dispatch exit",
+        "tooltip-format": "Return to login screen."
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 20,
+        "spacing": 3,
+        "on-click-middle": "close",
+        "tooltip-format": "{title}",
+        "on-click": "activate"
+    }
+}
