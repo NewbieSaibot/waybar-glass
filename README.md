@@ -11,7 +11,7 @@ Waybar glass theme and config for those who like glass themes or for those who s
 cd ~
 git clone https://github.com/NewbieSaibot/waybar-glass
 cd waybar-glass
-cp waybar ~/.config/waybar -r
+cp waybar ~/.config/ -r
 ```
 3. Restart Waybar
 ```bash
