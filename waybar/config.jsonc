@@ -4,13 +4,13 @@
     /* "modules-center": ["hyprland/window"], */
     "modules-right": ["tray",
                     /* "cpu", "memory", "temperature", */
+                    "pulseaudio",
                     "backlight",
                     "network",
-                    "pulseaudio",
                     "battery",
                     "power-profiles-daemon",
                     "custom/power",
-                    "clock",
+                    "clock"
                     ],
     "tray": {
         "spacing": 10
@@ -27,32 +27,61 @@
         "format-icons": ["", ""]
     },
     "battery": {
-        "format": "{icon}  {capacity}%",
-        "format-icons": ["", "", "", "", ""]
+        "interval": 1,
+        "format": "{icon} {capacity}%",
+        "states": {
+            "full": 95,
+            "great": 80,
+            "good": 70,
+            "well": 45,
+            "warning": 20,
+            "critical": 10
+        },
+        "format-icons": {
+            "default": "󰂑",
+            "discharging-full": "󱊣",
+            "discharging-great": "󱊣",
+            "discharging-good": "󱊢",
+            "discharging-well": "󱊡",
+            "discharging-warning": "󱊡",
+            "discharging-critical": "󰂃",
+            "charging-full": "󱊦 ",
+            "charging-great": "󱊦 ",
+            "charging-good": "󱊥 ",
+            "charging-well": "󱊤 ",
+            "charging-warning": "󱊤 ",
+            "charging-critical": "󰢟 "
+        },
+        "events": {
+            "on-discharging-warning": "notify-send -u normal 'Low Battery'",
+            "on-discharging-critical": "notify-send -u critical 'Very low battery'",
+            "on-charging-full": "notify-send -u normal 'Battery charged'"
+        }
     },
     "network": {
         "format-wifi": "　{signalStrength}%",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ethernet",
-        "format-disconnected": "⚠ ",
+        "format-disconnected": " ",
         "on-click": "nm-connection-editor",
         "tooltip-format": " {bandwidthDownBytes} 󰬬 {bandwidthUpBytes}",
         "tooltip-format-ethernet": "{ifname}  {bandwidthDownBytes} 󰬬 {bandwidthUpBytes}",
-        "tooltip-format-wifi": "{essid} ({signalStrength}%)    {bandwidthDownBytes} 󰬬 {bandwidthUpBytes}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)     {bandwidthDownBytes} 󰬬 {bandwidthUpBytes}",
         "tooltip-format-disconnected": "Disconnected"
     },
     "pulseaudio": {
-        "format": "　{volume}%",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-muted": "",
+        "format": "{icon}  {volume}%",
         "format-icons": {
+            "muted": "",
+            "bluetooth": "",
             "headphones": "",
-            "handsfree": "",
             "headset": "",
             "phone": "",
+            "phone-muted": "",
             "portable": "",
             "car": "",
-            "default": ["", ""]
+            "default": ["", "", ""]
         },
+        "max-volume": 100,
         "on-click": "pavucontrol"
     },
     "temperature": {
@@ -86,7 +115,7 @@
     "custom/power": {
         "format": " ",
         "on-click": "hyprctl dispatch exit",
-        "tooltip-format": "Return to login screen."
+        "tooltip-format": "Login screen"
     },
     "wlr/taskbar": {
         "format": "{icon}",
