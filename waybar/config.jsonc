@@ -59,6 +59,7 @@
         }
     },
     "network": {
+        "interval": 1,
         "format-wifi": "　{signalStrength}%",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ethernet",
         "format-disconnected": " ",

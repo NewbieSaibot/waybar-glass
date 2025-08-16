@@ -306,7 +306,7 @@ window#waybar.empty #window {
     );
 }
 
-#battery.discharging.critical:hover {
+#battery.discharging.critical:hover, #network.disconnected:hover {
     background: linear-gradient(
         to bottom,
         @bad-hover1 0%,
