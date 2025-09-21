@@ -163,7 +163,12 @@ window#waybar.empty #window {
 #idle_inhibitor,
 #power-profiles-daemon,
 #window,
-#custom-power {
+#custom-power,
+#custom-reboot,
+#custom-sleep,
+#custom-lock,
+#custom-notification,
+#custom-weather {
     background: linear-gradient(
         to bottom,
         @default1 0%,
@@ -184,6 +189,7 @@ window#waybar.empty #window {
     transition: all 0.2s ease;
 }
 
+#battery,
 #battery.charging.great,
 #battery.charging.full {
     background: linear-gradient(
@@ -290,7 +296,7 @@ window#waybar.empty #window {
     transition: all 0.2s ease;
 }
 
-#battery.charging.full:hover, #battery.charging.great:hover {
+#battery:hover, #battery.charging.full:hover, #battery.charging.great:hover {
     background: linear-gradient(
         to bottom,
         @full-hover1 0%,
@@ -329,10 +335,15 @@ window#waybar.empty #window {
 #backlight:hover,
 #temperature:hover,
 #custom-media:hover,
-#tray:hover,
 #power-profiles-daemon:hover,
 #window:hover,
-#custom-power:hover {
+#custom-power:hover,
+#custom-reboot:hover,
+#custom-sleep:hover,
+#custom-lock:hover,
+#custom-notification:hover,
+#custom-weather:hover
+{
     background: linear-gradient(
         to bottom,
         @default-hover1 0%,

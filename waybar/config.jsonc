@@ -1,16 +1,20 @@
 {
     "layer": "top",
     "modules-left": ["hyprland/workspaces", "wlr/taskbar"],
-    /* "modules-center": ["hyprland/window"], */
+    "modules-center": [
+                        /*"hyprland/window",*/
+                        "clock"
+                        ],
     "modules-right": ["tray",
                     /* "cpu", "memory", "temperature", */
+                    "custom/notification",
+                    "custom/weather",
                     "pulseaudio",
                     "backlight",
                     "network",
-                    "battery",
-                    "power-profiles-daemon",
-                    "custom/power",
-                    "clock"
+                    "group/group-battery",
+                    /*"custom/power"*/
+                    "group/group-logout"
                     ],
     "tray": {
         "spacing": 10
@@ -38,7 +42,7 @@
             "critical": 10
         },
         "format-icons": {
-            "default": "󰂑",
+            "default": "󱊣",
             "discharging-full": "󱊣",
             "discharging-great": "󱊣",
             "discharging-good": "󱊢",
@@ -91,8 +95,30 @@
         "format-icons": [""]
     },
     "clock": {
+        "interval": 1,
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "{:%H:%M}",
+        "format-alt": "{:%Y-%m-%d}",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "week-pos": "right",
+            "on-scroll": 1,
+            "format": {
+                "months":     "<span><b>{}</b></span>",
+                "days":       "<span><b>{}</b></span>",
+                "weeks":      "<span><b>W{}</b></span>",
+                "weekdays":   "<span><b>{}</b></span>",
+                "today":      "<span><b><u>{}</u></b></span>"
+            }
+        },
+        "actions":  {
+            "on-click-right": "mode",
+            "on-scroll-up": "tz_up",
+            "on-scroll-down": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
     },
     "power-profiles-daemon": {
           "format": "{icon} ",
@@ -107,16 +133,42 @@
     "hyprland/workspaces": {
         "format": "{id}",
         "persistent-workspaces": {
-            "*": 1
+            "*": 0
         }
     },
     "hyprland/window": {
         "format": "{}"
     },
     "custom/power": {
-        "format": " ",
+        "format": "{icon} ",
+        "format-icons": [""],
+        "on-click": "systemctl poweroff",
+        "tooltip-format": "Power off"
+    },
+    "custom/reboot": {
+        "format": "{icon} ",
+        "format-icons": [""],
+        "on-click": "systemctl reboot",
+        "tooltip-format": "Reboot"
+    },
+    "custom/lock": {
+        "format": "{icon} ",
+        "format-icons": [""],
         "on-click": "hyprctl dispatch exit",
-        "tooltip-format": "Login screen"
+        "tooltip-format": "Logout"
+    },
+    "custom/sleep": {
+        "format": "{icon} ",
+        "format-icons": ["󰤄"],
+        "on-click": "systemctl suspend",
+        "tooltip-format": "Sleep"
+    },
+    "custom/weather": {
+        "exec": "${HOME}/.config/waybar/scripts/get_weather.sh Russia+Tomsk",
+        "return-type": "json",
+        "format": "{}",
+        "tooltip": true,
+        "interval": 3600
     },
     "wlr/taskbar": {
         "format": "{icon}",
@@ -125,5 +177,51 @@
         "on-click-middle": "close",
         "tooltip-format": "{title}",
         "on-click": "activate"
-    }
+    },
+      "custom/notification": {
+        "tooltip": false,
+        "format": "{icon} ",
+        "format-icons": {
+          "notification": "<span foreground='red'><sup><small></small></sup></span>",
+          "none": "",
+          "dnd-notification": "<span foreground='red'><sup><small></small></sup></span>",
+          "dnd-none": "",
+          "inhibited-notification": "<span foreground='red'><sup><small></small></sup></span>",
+          "inhibited-none": "",
+          "dnd-inhibited-notification": "<span foreground='red'><sup><small></small></sup></span>",
+          "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+      },
+      "group/group-logout": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/power",
+            "custom/lock",
+            "custom/reboot",
+            "custom/sleep"
+        ],
+        "drawer": {
+            "children-class": "not-power",
+            "transition-duration": 500,
+            "transition-left-to-right": false
+        }
+      },
+      "group/group-battery": {
+        "orientation": "horizontal",
+        "modules": [
+            "battery",
+            "power-profiles-daemon"
+        ],
+        "drawer": {
+            "children-class": "not-battery",
+            "transition-duration": 500,
+            "transition-left-to-right": false
+        }
+      }
 }
