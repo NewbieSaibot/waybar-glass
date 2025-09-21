@@ -18,5 +18,7 @@ cp waybar ~/.config/ -r
 killall waybar
 waybar &
 ```
+4. Make sure to change your city in scripts/get_weather.sh
+
 Enjoy your theme!
 
