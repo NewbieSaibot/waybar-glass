@@ -160,7 +160,7 @@
     "custom/sleep": {
         "format": "{icon} ",
         "format-icons": ["󰤄"],
-        "on-click": "systemctl suspend",
+        "on-click": "systemctl sleep",
         "tooltip-format": "Sleep"
     },
     "custom/weather": {
