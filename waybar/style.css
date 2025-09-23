@@ -189,6 +189,10 @@ window#waybar.empty #window {
     transition: all 0.2s ease;
 }
 
+#custom-weather {
+    font-size: unset;
+}
+
 #battery,
 #battery.charging.great,
 #battery.charging.full {
