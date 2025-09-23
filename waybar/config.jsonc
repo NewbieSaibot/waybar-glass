@@ -164,7 +164,7 @@
         "tooltip-format": "Sleep"
     },
     "custom/weather": {
-        "exec": "${HOME}/.config/waybar/scripts/get_weather.sh Russia+Tomsk",
+        "exec": "${HOME}/.config/waybar/scripts/get_weather.sh Japan+Tokyo",
         "return-type": "json",
         "format": "<small>{}</small>",
         "tooltip": true,
