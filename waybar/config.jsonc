@@ -1,5 +1,5 @@
 {
-    "layer": "top",
+    "layer": "bottom",
     "modules-left": ["hyprland/workspaces", "wlr/taskbar"],
     "modules-center": [
                         /*"hyprland/window",*/
@@ -76,7 +76,7 @@
     "pulseaudio": {
         "format": "{icon}  {volume}%",
         "format-icons": {
-            "muted": "",
+            "default-muted": "",
             "bluetooth": "",
             "headphones": "",
             "headset": "",
@@ -87,7 +87,7 @@
             "default": ["", "", ""]
         },
         "max-volume": 100,
-        "on-click": "pavucontrol"
+        "on-click": "kitty alsamixer"
     },
     "temperature": {
         "critical-threshold": 60,
@@ -142,13 +142,13 @@
     "custom/power": {
         "format": "{icon} ",
         "format-icons": [""],
-        "on-click": "systemctl poweroff",
+        "on-click": "poweroff",
         "tooltip-format": "Power off"
     },
     "custom/reboot": {
         "format": "{icon} ",
         "format-icons": [""],
-        "on-click": "systemctl reboot",
+        "on-click": "reboot",
         "tooltip-format": "Reboot"
     },
     "custom/lock": {
@@ -159,8 +159,8 @@
     },
     "custom/sleep": {
         "format": "{icon} ",
-        "format-icons": ["󰤄"],
-        "on-click": "systemctl sleep",
+        "format-icons": [""],
+        "on-click": "zzz",
         "tooltip-format": "Sleep"
     },
     "custom/weather": {
@@ -168,7 +168,7 @@
         "return-type": "json",
         "format": "<small>{}</small>",
         "tooltip": true,
-        "interval": 3600
+        "interval": 1800
     },
     "wlr/taskbar": {
         "format": "{icon}",

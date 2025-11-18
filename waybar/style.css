@@ -44,6 +44,15 @@
 @define-color default-border1 rgba(0, 0, 0, 0.3);
 @define-color default-border2 rgba(255, 255, 255, 0.4);
 
+@define-color bad-border1 rgba(0, 0, 0, 0.3);
+@define-color bad-border2 rgba(255, 200, 100, 0.4);
+
+@define-color warning-border1 rgba(0, 0, 0, 0.3);
+@define-color warning-border2 rgba(230, 200, 100, 0.4);
+
+@define-color green-border1 rgba(0, 0, 0, 0.3);
+@define-color green-border2 rgba(100, 255, 100, 0.4);
+
 @define-color empty1 rgba(0, 0, 0, 0);
 
 @define-color text-shadow1 rgba(0, 0, 0, 0.5);
@@ -192,6 +201,32 @@ window#waybar.empty #window {
     transition: all 0.2s ease;
 }
 
+#custom-power {
+	padding: 0px 0px;
+	padding-left: 8px;
+	padding-right: 5px;
+}
+#custom-lock {
+	padding: 0px 0px;
+	padding-left: 10px;
+	padding-right: 6px;
+}
+#custom-reboot {
+	padding: 0px 0px;
+	padding-left: 10px;
+	padding-right: 5px;
+}
+#custom-sleep {
+	padding: 0px 0px;
+	padding-left: 7px;
+	padding-right: 10px;
+}
+#custom-notification {
+	padding: 0px 0px;
+	padding-left: 9px;
+	padding-right: 7px;
+}
+
 #custom-weather {
     font-size: unset;
 }
@@ -205,10 +240,10 @@ window#waybar.empty #window {
         @full2 100%
     );
     border: none;
-    border-left: 1px solid @default-border1;
-    border-top: 1px solid @default-border1;
-    border-right: 1px solid @default-border2;
-    border-bottom: 1px solid @default-border2;
+    border-left: 1px solid @green-border1;
+    border-top: 1px solid @green-border1;
+    border-right: 1px solid @green-border2;
+    border-bottom: 1px solid @green-border2;
     border-radius: 4px;
     padding: 0px 10px;
     margin: 1px 5px;
@@ -226,10 +261,10 @@ window#waybar.empty #window {
         @bad2 100%
     );
     border: none;
-    border-left: 1px solid @default-border1;
-    border-top: 1px solid @default-border1;
-    border-right: 1px solid @default-border2;
-    border-bottom: 1px solid @default-border2;
+    border-left: 1px solid @bad-border1;
+    border-top: 1px solid @bad-border1;
+    border-right: 1px solid @bad-border2;
+    border-bottom: 1px solid @bad-border2;
     border-radius: 4px;
     padding: 0px 10px;
     margin: 1px 5px;
@@ -247,10 +282,10 @@ window#waybar.empty #window {
         @full2 100%
     );
     border: none;
-    border-left: 1px solid @default-border1;
-    border-top: 1px solid @default-border1;
-    border-right: 1px solid @default-border2;
-    border-bottom: 1px solid @default-border2;
+    border-left: 1px solid @green-border1;
+    border-top: 1px solid @green-border1;
+    border-right: 1px solid @green-border2;
+    border-bottom: 1px solid @green-border2;
     border-radius: 4px;
     padding: 0px 10px;
     margin: 1px 5px;
@@ -268,10 +303,10 @@ window#waybar.empty #window {
         @warning2 100%
     );
     border: none;
-    border-left: 1px solid @default-border1;
-    border-top: 1px solid @default-border1;
-    border-right: 1px solid @default-border2;
-    border-bottom: 1px solid @default-border2;
+    border-left: 1px solid @warning-border1;
+    border-top: 1px solid @warning-border1;
+    border-right: 1px solid @warning-border2;
+    border-bottom: 1px solid @warning-border2;
     border-radius: 4px;
     padding: 0px 10px;
     margin: 1px 5px;
@@ -289,10 +324,10 @@ window#waybar.empty #window {
         @bad2 100%
     );
     border: none;
-    border-left: 1px solid @default-border1;
-    border-top: 1px solid @default-border1;
-    border-right: 1px solid @default-border2;
-    border-bottom: 1px solid @default-border2;
+    border-left: 1px solid @bad-border1;
+    border-top: 1px solid @bad-border1;
+    border-right: 1px solid @bad-border2;
+    border-bottom: 1px solid @bad-border2;
     border-radius: 4px;
     padding: 0px 10px;
     margin: 1px 5px;
@@ -309,6 +344,7 @@ window#waybar.empty #window {
         @full-hover1 0%,
         @full-hover2 100%
     );
+    text-shadow: 0 0 2px @text-shadow1-hover;
 }
 
 #battery.discharging.warning:hover {
@@ -317,6 +353,7 @@ window#waybar.empty #window {
         @warning-hover1 0%,
         @warning-hover2 100%
     );
+    text-shadow: 0 0 2px @text-shadow1-hover;
 }
 
 #battery.discharging.critical:hover, #network.disconnected:hover {
@@ -325,6 +362,7 @@ window#waybar.empty #window {
         @bad-hover1 0%,
         @bad-hover2 100%
     );
+    text-shadow: 0 0 2px @text-shadow1-hover;
 }
 
 #clock:hover,

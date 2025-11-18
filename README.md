@@ -1,8 +1,13 @@
 # waybar-glass
-Waybar glass theme and config for those who like glass themes or for those who simply have nostalgia for them
+Clean and sleek Waybar config
 
 ## Screenshot
 ![waybar-glass](screenshot.png)
+
+## Dependencies
+[Noto Sans font](https://fonts.google.com/noto/specimen/Noto%20Sans)
+[Nerd Fonts (for emojis)](https://github.com/ryanoasis/nerd-fonts)
+[SwayNotificationCenter (for notification center, if you need it)](https://github.com/ErikReider/SwayNotificationCenter)
 
 ## How to install
 1. Install Waybar
@@ -18,7 +23,7 @@ cp waybar ~/.config/ -r
 killall waybar
 waybar &
 ```
-4. Make sure to change your city in config.jsonc (for weather)
+4. Make sure to change your city in config.jsonc (for weather) and other changes
 
 Enjoy your theme!
 
