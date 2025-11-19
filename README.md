@@ -27,17 +27,11 @@ cp waybar ~/.config/ -r
 killall waybar
 waybar &
 ```
-4. Make sure to change your city in config.jsonc (for weather) and other changes
+4. Make sure to change your city in config.jsonc (for weather) and make other changes to your liking
 
 ## How to install dark theme instead
 Some of you may not like dark theme but here it is
-Step 2 execute the following commands instead:
-```bash
-cd ~
-git clone https://github.com/NewbieSaibot/waybar-glass
-cd waybar-glass
-cp dark-theme ~/.config/waybar -r
-```
+5. cp darktheme.css ~/.config/waybar/style.css
 
 Enjoy your theme!
 
