@@ -30,9 +30,11 @@ waybar &
 4. Make sure to change your city in config.jsonc (for weather) and make other changes to your liking
 
 ## How to install dark theme instead
-Some of you may not like dark theme but here it is
+5. Some of you may not like dark theme but here it is
 
-5. cp darktheme.css ~/.config/waybar/style.css
+```bash
+cp darktheme.css ~/.config/waybar/style.css
+```
 
 Enjoy your theme!
 
