@@ -6,7 +6,9 @@ Clean and sleek Waybar config
 
 ## Dependencies
 [Noto Sans font](https://fonts.google.com/noto/specimen/Noto%20Sans)
+
 [Nerd Fonts (for emojis)](https://github.com/ryanoasis/nerd-fonts)
+
 [SwayNotificationCenter (for notification center, if you need it)](https://github.com/ErikReider/SwayNotificationCenter)
 
 ## How to install

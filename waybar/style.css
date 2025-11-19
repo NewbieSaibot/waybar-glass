@@ -45,7 +45,7 @@
 @define-color default-border2 rgba(255, 255, 255, 0.4);
 
 @define-color bad-border1 rgba(0, 0, 0, 0.3);
-@define-color bad-border2 rgba(255, 200, 100, 0.4);
+@define-color bad-border2 rgba(255, 100, 100, 0.4);
 
 @define-color warning-border1 rgba(0, 0, 0, 0.3);
 @define-color warning-border2 rgba(230, 200, 100, 0.4);
