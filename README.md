@@ -31,6 +31,7 @@ waybar &
 
 ## How to install dark theme instead
 Some of you may not like dark theme but here it is
+
 5. cp darktheme.css ~/.config/waybar/style.css
 
 Enjoy your theme!
