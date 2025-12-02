@@ -29,12 +29,8 @@ waybar &
 ```
 4. Make sure to change your city in config.jsonc (for weather) and make other changes to your liking
 
-## How to install dark theme instead
-5. Some of you may not like dark theme but here it is
-
-```bash
-cp darktheme.css ~/.config/waybar/style.css
-```
+## How to switch themes
+Just press the lightbulb button
 
 Enjoy your theme!
 

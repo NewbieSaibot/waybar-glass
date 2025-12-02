@@ -28,7 +28,9 @@
     "backlight": {
         //"device": "intel_backlight",
         "format": "　{percent}%",
-        "format-icons": ["", ""]
+        "format-icons": ["", ""],
+		"tooltip-format": "Switch themes",
+		"on-click": "~/.config/waybar/scripts/switch_themes.sh"
     },
     "battery": {
         "interval": 1,
