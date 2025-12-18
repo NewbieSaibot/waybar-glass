@@ -153,8 +153,8 @@ window#waybar.empty #window {
 #workspaces button.urgent {
     background: linear-gradient(
         to bottom,
-        @warning-hover1 0%,
-        @warning-hover2 100%
+        @warning1 0%,
+        @warning2 100%
     );
     border: none;
     border-left: 1px solid @warning-border1;
