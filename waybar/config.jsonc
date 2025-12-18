@@ -1,6 +1,6 @@
 {
     "layer": "bottom",
-    "modules-left": ["hyprland/workspaces", "wlr/taskbar"],
+    "modules-left": ["sway/workspaces", "hyprland/workspaces", "wlr/taskbar"],
     "modules-center": [
                         /*"hyprland/window",*/
                         "clock"
@@ -132,6 +132,8 @@
             "power-saver": ""
           }
     },
+	"sway/workspaces": {
+	},
     "hyprland/workspaces": {
         "format": "{id}",
         "persistent-workspaces": {

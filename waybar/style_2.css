@@ -121,7 +121,8 @@ window#waybar.empty #window {
     color: white;
 }
 
-#workspaces button.active {
+#workspaces button.active,
+#workspaces button.visible {
     background: linear-gradient(
         to bottom,
         @active1 0%,
@@ -139,7 +140,8 @@ window#waybar.empty #window {
     text-shadow: 0 0 2px @text-shadow1-hover;
 }
 
-#workspaces button.active:hover {
+#workspaces button.active:hover,
+#workspaces button.visible:hover {
     background: linear-gradient(
         to bottom,
         @active-hover1 0%,
@@ -148,6 +150,33 @@ window#waybar.empty #window {
     text-shadow: 0 0 2px @text-shadow1-hover;
 }
 
+#workspaces button.urgent {
+    background: linear-gradient(
+        to bottom,
+        @warning-hover1 0%,
+        @warning-hover2 100%
+    );
+    text-shadow: 0 0 2px @text-shadow1-hover;
+    border: none;
+    border-left: 1px solid @warning-border1;
+    border-top: 1px solid @warning-border1;
+    border-right: 1px solid @warning-border2;
+    border-bottom: 1px solid @warning-border2;
+}
+
+#workspaces button.urgent:hover {
+    background: linear-gradient(
+        to bottom,
+        @warning-hover1 0%,
+        @warning-hover2 100%
+    );
+    text-shadow: 0 0 2px @text-shadow1-hover;
+    border: none;
+    border-left: 1px solid @warning-border1;
+    border-top: 1px solid @warning-border1;
+    border-right: 1px solid @warning-border2;
+    border-bottom: 1px solid @warning-border2;
+}
 #clock {
     font-family: "Source Code Pro", 'Hack', "FiraCode Nerd Font", "Iosevka Nerd Font";
     font-weight: bold;
