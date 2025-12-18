@@ -156,7 +156,6 @@ window#waybar.empty #window {
         @warning-hover1 0%,
         @warning-hover2 100%
     );
-    text-shadow: 0 0 2px @text-shadow1-hover;
     border: none;
     border-left: 1px solid @warning-border1;
     border-top: 1px solid @warning-border1;
@@ -170,7 +169,6 @@ window#waybar.empty #window {
         @warning-hover1 0%,
         @warning-hover2 100%
     );
-    text-shadow: 0 0 2px @text-shadow1-hover;
     border: none;
     border-left: 1px solid @warning-border1;
     border-top: 1px solid @warning-border1;
