@@ -302,7 +302,7 @@ window#waybar.empty #window {
     transition: all 0.2s ease;
 }
 
-#battery.discharing.full, #battery.discharing.great {
+#battery.discharging.full, #battery.discharging.great {
     background: linear-gradient(
         to bottom,
         @full1 0%,
