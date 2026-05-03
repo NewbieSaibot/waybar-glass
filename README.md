@@ -27,10 +27,12 @@ cp waybar ~/.config/ -r
 killall waybar
 waybar &
 ```
-4. Make sure to change your city in config.jsonc (for weather) and make other changes to your liking
+4. Make sure to change your city in `config.jsonc` (for weather) and make other changes to your liking
 
 ## How to switch themes
 Just press the lightbulb button
 
 Enjoy your theme!
 
+## Something does not work or any suggestions?
+Issues and PR's are welcome.
