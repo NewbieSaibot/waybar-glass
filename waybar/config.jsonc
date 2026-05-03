@@ -10,6 +10,7 @@
                     "custom/notification",
                     "custom/weather",
                     "pulseaudio",
+					/* "wireplumber", */
                     "backlight",
                     "network",
                     "group/group-battery",
@@ -90,6 +91,22 @@
         },
         "max-volume": 100,
         "on-click": "kitty alsamixer"
+    },
+    "wireplumber": {
+        "format": "{icon}  {volume}%",
+		"format-muted": " ",
+        "format-icons": {
+            "bluetooth": "",
+            "headphones": "",
+            "headset": "",
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "max-volume": 100,
+        "on-click": "alacritty -e alsamixer"
     },
     "temperature": {
         "critical-threshold": 60,
