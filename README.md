@@ -10,14 +10,14 @@ Clean and sleek Waybar config for skeuomorphism appreciators ✨☁️
 
 ![Dark theme](screenshot-dark.png)
 
-### Features
+## Features
 - Sway and Hyprland support
 - SwayNotificationCenter module
 - Light and dark themes
 - Screen brightness module as theme switching button
 - Simple weather module
 
-### Dependencies
+## Dependencies
 [Waybar](https://github.com/Alexays/Waybar)
 
 [Noto Sans font](https://fonts.google.com/noto/specimen/Noto%20Sans)
@@ -26,7 +26,7 @@ Clean and sleek Waybar config for skeuomorphism appreciators ✨☁️
 
 [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter) (notification center if you need it)
 
-### Installation
+## Installation
 1. Install Waybar and other dependencies aforementioned.
 2. If you have another Waybar theme already installed, make sure to back it up first:
 ```bash
