@@ -26,23 +26,23 @@
 @define-color full-hover1 rgba(90, 250, 90, 0.7);
 @define-color full-hover2 rgba(70, 220, 70, 0.5);
 
-@define-color default1 rgba(220, 220, 220, 0.3);
-@define-color default2 rgba(160, 160, 160, 0.14);
+@define-color default1 rgba(220, 220, 220, 0.10);
+@define-color default2 rgba(160, 160, 160, 0.05);
 
 @define-color default11 rgba(210, 210, 210, 0.11);
 @define-color default12 rgba(160, 160, 260, 0.07);
 @define-color default13 rgba(80, 80, 80, 0.05);
 
-@define-color default-hover1 rgba(240, 240, 240, 0.7);
-@define-color default-hover2 rgba(180, 180, 180, 0.5);
+@define-color default-hover1 rgba(240, 240, 240, 0.5);
+@define-color default-hover2 rgba(180, 180, 180, 0.3);
 
-@define-color active1 rgba(255, 255, 225, 0.6);
-@define-color active2 rgba(180, 180, 180, 0.4);
-@define-color active3 rgba(80, 80, 80, 0.3);
+@define-color active1 rgba(255, 255, 225, 0.4);
+@define-color active2 rgba(180, 180, 180, 0.3);
+@define-color active3 rgba(80, 80, 80, 0.2);
 
-@define-color active-hover1 rgba(255, 255, 255, 0.7);
-@define-color active-hover2 rgba(180, 180, 180, 0.5);
-@define-color active-hover3 rgba(80, 80, 80, 0.45);
+@define-color active-hover1 rgba(255, 255, 255, 0.5);
+@define-color active-hover2 rgba(180, 180, 180, 0.3);
+@define-color active-hover3 rgba(80, 80, 80, 0.2);
 
 @define-color default-border1 rgba(0, 0, 0, 0.3);
 @define-color default-border2 rgba(255, 255, 255, 0.4);
@@ -472,9 +472,9 @@ tooltip {
     padding: 0 5px;
     background: linear-gradient(
         to bottom,
-        rgba(180, 210, 255, 0.45) 0%,
-        rgba(100, 160, 220, 0.3) 50%,
-        rgba(40, 80, 120, 0.2) 100%
+        rgba(210, 210, 210, 0.15) 0%,
+        rgba(150, 150, 150, 0.1) 50%,
+        rgba(80, 80, 80, 0.07) 100%
     );
     border: none;
     border-left: 1px solid @default-border1;
