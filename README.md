@@ -10,6 +10,8 @@ Clean and sleek Waybar config for skeuomorphism appreciators ✨☁️
 
 ![Dark theme](screenshot-dark.png)
 
+![Transparent theme](screenshot-transparent.png)
+
 ## Features
 - Sway and Hyprland support
 - SwayNotificationCenter module
